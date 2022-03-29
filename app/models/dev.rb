@@ -16,8 +16,9 @@ class Dev < ActiveRecord::Base
 
     def give_away(dev,freebie)
        have_item = received_item_dev(freebie)
-       puts dev
-       binding.pry
+       if (have_item == true)
+        puts "hello" 
+
     end
         #remove item instance from dev that is giving item away 
         #only if dev owns it.
@@ -27,3 +28,10 @@ end
 
 # dev.freebies.filter { |freebies| freebies["item_name"] == "#{freebie}"}
 
+# def give_away(dev, freebie)
+#     if self.recieved_one?(freebie.item_name)
+#         freebie.update(dev_id: dev.id)
+#     else
+#         "Cannot give away something you dont own"
+#     end
+end
