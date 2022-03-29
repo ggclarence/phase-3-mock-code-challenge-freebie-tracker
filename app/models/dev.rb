@@ -16,7 +16,7 @@ class Dev < ActiveRecord::Base
 
     def give_away(dev,freebie)
        have_item = received_item_dev(freebie)
-       if (have_item == true)
+       if (have_item = true)
         puts "hello" 
 
     end
